@@ -1,0 +1,67 @@
+<div class="row-layout calendar-wrapper">
+  <div class="column-layout main-cal-container">
+    <div class="row-layout cal-header">
+      <div class="column-layout cal-info">
+        <h3 class="content">
+          Time Allocation Planner
+        </h3>
+        <p class="cal-page-description">
+          Biometrically authenticated time-blocking matrix, synchronized with calendar nodes.
+        </p>
+      </div>
+      <div class="row-layout cal-actions">
+        <button igxButton="contained" type="button" class="add-schedule-entry">
+          <igx-icon>
+            calendar_today
+          </igx-icon>
+          <span>Timeblock Hour</span>
+        </button>
+      </div>
+    </div>
+    <div class="row-layout split-calendar-view">
+      <div class="column-layout interactive-matrix-container">
+        <igx-calendar [showWeekNumbers]="true" [hasHeader]="false" [value]="date" class="interactive-planner-calendar"></igx-calendar>
+      </div>
+      <div class="column-layout planner-ledger-list-container">
+        <h5 class="content">
+          Selected Day Operational Tasks
+        </h5>
+        <igx-list class="timeline-list">
+          <igx-list-item [selected]="this.timelineListSelectedItem != null && this.timelineListSelectedItem === '0'" (click)="timelineListSelectedItem = '0'" class="daily-standup-sync">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-durj-1l">
+                <igx-icon class="icon">
+                  radio_button_checked
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Daily Standup Matrix Sync</span>
+            <span igxListLineSubTitle>09:00 AM - 10:00 AM • Vault secure line verified</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.timelineListSelectedItem != null && this.timelineListSelectedItem === '1'" (click)="timelineListSelectedItem = '1'" class="daily-standup-sync">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-durj-1l">
+                <igx-icon class="icon">
+                  radio_button_checked
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>SaaS Core Engineering Deep Sprint</span>
+            <span igxListLineSubTitle>11:30 AM - 02:00 PM • Development work for SaaS objectives</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.timelineListSelectedItem != null && this.timelineListSelectedItem === '2'" (click)="timelineListSelectedItem = '2'" class="daily-standup-sync">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-durj-1l">
+                <igx-icon class="icon">
+                  radio_button_checked
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Cardio aerobic run matrix</span>
+            <span igxListLineSubTitle>04:00 PM - 05:30 PM • Gym routine progression run</span>
+          </igx-list-item>
+        </igx-list>
+      </div>
+    </div>
+  </div>
+</div>

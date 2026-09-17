@@ -1,0 +1,59 @@
+<igx-navbar class="life-os-top-navigation">
+  <igx-navbar-action>
+    <button igxIconButton="flat" [igxToggleAction]="lifeOSNavigationModules" class="toggle-drawer-menu">
+      <igx-icon class="icon">
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      LifeOS Premium System
+    </h6>
+  </igx-navbar-title>
+  <button igxIconButton="flat" class="toggle-drawer-menu">
+    <igx-icon class="icon">
+      search
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat" class="toggle-drawer-menu">
+    <igx-icon class="icon">
+      fingerprint
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat" class="toggle-drawer-menu">
+    <igx-icon class="icon">
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout shell-horizon">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="300px" #lifeOSNavigationModules class="life-os-navigation-modules">
+    <ng-template igxDrawer>
+      <div igxDrawerItem [active]="isActive(`/home-dashboard`)" [routerLink]="[`/home-dashboard`]">
+        <span>Home Dashboard</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/smart-notes`)" [routerLink]="[`/smart-notes`]">
+        <span>Smart Notes</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/finance-tracker`)" [routerLink]="[`/finance-tracker`]">
+        <span>Finance Tracker</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/secure-documents`)" [routerLink]="[`/secure-documents`]">
+        <span>Secure Documents</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/quarterly-goals`)" [routerLink]="[`/quarterly-goals`]">
+        <span>Quarterly Goals</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/calendar-planner`)" [routerLink]="[`/calendar-planner`]">
+        <span>Calendar Planner</span>
+      </div>
+      <div igxDrawerItem [active]="isActive(`/habit-streaks`)" [routerLink]="[`/habit-streaks`]">
+        <span>Habit Streaks</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="active-operational-module-screen">
+    <router-outlet></router-outlet>
+  </div>
+</div>

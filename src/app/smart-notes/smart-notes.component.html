@@ -1,0 +1,66 @@
+<div class="row-layout notes-wrapper">
+  <div class="column-layout main-notes-container">
+    <div class="row-layout notes-actions-header">
+      <div class="column-layout notes-info">
+        <h3 class="notes-page-title">
+          Smart Notes Ledger
+        </h3>
+        <p class="notes-page-description">
+          AI-indexed voice transcriptions with semantic secure storage capabilities.
+        </p>
+      </div>
+      <div class="row-layout header-actions">
+        <button igxButton="contained" type="button" class="add-note-button">
+          <igx-icon>
+            mic
+          </igx-icon>
+          <span>Transcribe Voice</span>
+        </button>
+        <button igxButton="outlined" type="button" class="export-note-button">
+          New Document Link
+        </button>
+      </div>
+    </div>
+    <div class="row-layout filter-search-layout">
+      <igx-input-group type="search" class="search-notes">
+        <igx-prefix>
+          <igx-icon class="icon-beuzr">
+            search
+          </igx-icon>
+        </igx-prefix>
+        <input type="search" [(ngModel)]="value" placeholder="Search notes semantic indexes..." igxInput />
+        <label igxLabel>Search</label>
+      </igx-input-group>
+      <div class="row-layout filter-selection">
+        <igx-select type="border" class="sort-type">
+          <igx-select-item value="1">
+            Recently Transcribed
+          </igx-select-item>
+          <igx-select-item value="2">
+            Alphabetical
+          </igx-select-item>
+          <label igxLabel>Sort By Date</label>
+        </igx-select>
+        <igx-select type="border" class="sort-type">
+          <igx-select-item value="1">
+            All Workspaces
+          </igx-select-item>
+          <igx-select-item value="2">
+            Personal Operating
+          </igx-select-item>
+          <igx-select-item value="3">
+            Finance &amp; Budget
+          </igx-select-item>
+          <label igxLabel>Tag</label>
+        </igx-select>
+      </div>
+    </div>
+    <igx-grid [data]="northwindEmployees" primaryKey="employeeID" [allowFiltering]="true" filterMode="excelStyleFilter" class="notes-secure-grid">
+      <igx-column field="Title" header="Note Title" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="Excerpt" header="AI Transcription Excerpt" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="AudioLength" header="Voice Length" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="TranscriptionStatus" header="Status" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+      <igx-column field="DateUpdated" header="Last Synced" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    </igx-grid>
+  </div>
+</div>

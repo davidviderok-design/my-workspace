@@ -1,0 +1,162 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+}
+.row-layout {
+  display: flex;
+}
+.calendar-wrapper {
+  background-color: #09090B;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+  position: relative;
+  padding: 48px 32px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.main-cal-container {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 32px;
+  position: relative;
+  max-width: 1400px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.cal-header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.cal-info {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px 0;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.cal-actions {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.split-calendar-view {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.interactive-matrix-container {
+  background-color: #18181B;
+  border-radius: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px 0;
+  position: relative;
+  padding: 24px;
+  min-width: 320px;
+  flex: 1 0 0;
+}
+.planner-ledger-list-container {
+  background-color: #18181B;
+  border-radius: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px 0;
+  position: relative;
+  padding: 24px;
+  min-width: 360px;
+  flex: 1 0 0;
+}
+.content {
+  color: #FFFFFF;
+  height: max-content;
+  min-width: min-content;
+}
+.cal-page-description {
+  color: var(--ig-gray-400);
+  height: max-content;
+  min-width: min-content;
+}
+.interactive-planner-calendar {
+  width: max-content;
+  height: max-content;
+  min-width: max-content;
+}
+.avatar-durj-1l {
+  --ig-size: var(--ig-size-small);
+  --igx-avatar-background: #09090B;
+}
+.icon {
+  color: #6366F1;
+}
+.avatar-durj-1l::part(base) {
+  --igx-avatar-color: #6366F1;
+}
+.add-schedule-entry {
+  --background: #6366F1;
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
+.timeline-list {
+  height: max-content;
+}
+.daily-standup-sync {
+  --item-background: #18181B;
+  --item-background-hover: var(--ig-list-item-background-hover, lch(from var(--item-background) calc(l + (50 - l) * 0.1 + sign(50 - l) * 5) c h));
+  --item-background-active: var(--ig-list-item-background-active, var(--item-background-hover));
+  --item-background-selected: var(--ig-list-item-background-selected, var(--item-background-active));
+  --item-text-color: #FFFFFF;
+  --item-text-color-hover: #FFFFFF;
+  --item-text-color-active: #FFFFFF;
+  --item-text-color-selected: #FFFFFF;
+  --item-title-color: #FFFFFF;
+  --item-title-color-hover: #FFFFFF;
+  --item-title-color-active: #FFFFFF;
+  --item-title-color-selected: #FFFFFF;
+  --item-action-color: #FFFFFF;
+  --item-action-color-hover: #FFFFFF;
+  --item-action-color-active: #FFFFFF;
+  --item-action-color-selected: #FFFFFF;
+  --item-subtitle-color: #FFFFFF;
+  --item-subtitle-color-hover: #FFFFFF;
+  --item-subtitle-color-active: #FFFFFF;
+  --item-subtitle-color-selected: #FFFFFF;
+  --item-thumbnail-color: #FFFFFF;
+  --item-thumbnail-color-hover: #FFFFFF;
+  --item-thumbnail-color-active: #FFFFFF;
+  --item-thumbnail-color-selected: #FFFFFF;
+}

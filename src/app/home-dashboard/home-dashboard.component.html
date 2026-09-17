@@ -1,0 +1,218 @@
+<div class="row-layout dashboard-wrapper">
+  <div class="column-layout main-dashboard-container">
+    <div class="column-layout header-area">
+      <div class="row-layout header-row">
+        <div class="column-layout welcome-text">
+          <h3 class="content">
+            Welcome Back, Operator
+          </h3>
+          <p class="welcome-subtitle">
+            All modules synchronized. System status: Optimal.
+          </p>
+        </div>
+        <igx-chip class="weather-status">
+          <igx-prefix>
+            <igx-icon class="icon-9sjdgd">
+              cloud
+            </igx-icon>
+          </igx-prefix>
+          London • 12°C Rain
+        </igx-chip>
+      </div>
+      <igx-banner class="ai-summary">
+        <p>
+          AI daily operational overview: Today you have 3 key priorities. Spending is within your parameters (12% lower than usual). Note synchronization complete across all active biometric nodes.
+        </p>
+        <igx-banner-actions>
+          <button igxButton="flat" type="button" class="button-5bwtk-7">
+            Generate Weekly Report
+          </button>
+        </igx-banner-actions>
+      </igx-banner>
+    </div>
+    <div class="row-layout metrics">
+      <igx-card class="spending-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="spending-icon">
+              <igx-icon class="icon">
+                account_balance_wallet
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Monthly Spending
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+        </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout spending-core-content">
+            <h3 class="content">
+              $1,240.50
+            </h3>
+            <div class="row-layout spending-trend">
+              <p class="ig-typography__subtitle-2 spending-trend-rate">
+                -8.4%
+              </p>
+              <p class="ig-typography__body-2 welcome-subtitle">
+                vs last month
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="spending-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="spending-icon">
+              <igx-icon class="icon">
+                local_fire_department
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Habit Streak
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+        </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout spending-core-content">
+            <h3 class="content">
+              12 Days
+            </h3>
+            <div class="row-layout spending-trend">
+              <p class="ig-typography__subtitle-2 spending-trend-rate">
+                +3 Days
+              </p>
+              <p class="ig-typography__body-2 welcome-subtitle">
+                personal record
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="spending-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="spending-icon">
+              <igx-icon class="icon">
+                track_changes
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Quarterly Progress
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+        </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout spending-core-content">
+            <h3 class="content">
+              68% Complete
+            </h3>
+            <div class="row-layout spending-trend">
+              <p class="ig-typography__subtitle-2 spending-trend-rate">
+                3 Active
+              </p>
+              <p class="ig-typography__body-2 welcome-subtitle">
+                Q1 goals track
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="spending-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="spending-icon">
+              <igx-icon class="icon">
+                lock
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Vault Encryption
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+        </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout spending-core-content">
+            <h3 class="content">
+              256-Bit AES
+            </h3>
+            <div class="row-layout spending-trend">
+              <p class="ig-typography__subtitle-2 spending-trend-rate">
+                Locked
+              </p>
+              <p class="ig-typography__body-2 welcome-subtitle">
+                offline sync enabled
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+    </div>
+    <div class="row-layout stats-overview">
+      <div class="column-layout spending-analytics-wrapper">
+        <div class="column-layout chart-header">
+          <h5 class="content">
+            Spending Dynamics
+          </h5>
+          <p class="ig-typography__body-2 welcome-subtitle">
+            Visual cash outflow representation across primary indices
+          </p>
+        </div>
+        <igx-category-chart [dataSource]="financialBoxOfficeRevenue" chartType="area" xAxisTitle="Operational Category" yAxisTitle="Amount ($)" computedPlotAreaMarginMode="series" class="outflow-chart"></igx-category-chart>
+      </div>
+      <div class="column-layout schedule-wrapper">
+        <div class="column-layout chart-header">
+          <h5 class="content">
+            Today's Schedule Matrix
+          </h5>
+          <p class="ig-typography__body-2 welcome-subtitle">
+            Scheduled operations &amp; task planner events
+          </p>
+        </div>
+        <igx-list class="todays-timeline">
+          <igx-list-item [selected]="this.todaySTimelineSelectedItem != null && this.todaySTimelineSelectedItem === '0'" (click)="todaySTimelineSelectedItem = '0'" class="item-sched-1">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="item-avatar-1">
+                <igx-icon class="icon">
+                  psychology
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Daily Operational Standup</span>
+            <span igxListLineSubTitle>09:00 AM • Biometric Verification &amp; AI Briefing</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.todaySTimelineSelectedItem != null && this.todaySTimelineSelectedItem === '1'" (click)="todaySTimelineSelectedItem = '1'" class="item-sched-1">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="item-avatar-1">
+                <igx-icon class="icon">
+                  account_balance
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Finance &amp; Wealth Audit</span>
+            <span igxListLineSubTitle>11:30 AM • Asset Portfolio Allocation</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.todaySTimelineSelectedItem != null && this.todaySTimelineSelectedItem === '2'" (click)="todaySTimelineSelectedItem = '2'" class="item-sched-1">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="item-avatar-1">
+                <igx-icon class="icon">
+                  fitness_center
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Physical Habit Engine Run</span>
+            <span igxListLineSubTitle>04:00 PM • Resistance Training Routine</span>
+          </igx-list-item>
+        </igx-list>
+      </div>
+    </div>
+  </div>
+</div>

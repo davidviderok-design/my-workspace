@@ -1,0 +1,194 @@
+<div class="row-layout finances-wrapper">
+  <div class="column-layout main-finance-container">
+    <div class="row-layout finance-header">
+      <div class="column-layout finance-info">
+        <h3 class="content">
+          Wealth &amp; Balance Matrix
+        </h3>
+        <p class="finance-page-description">
+          Track liabilities, active digital recurring subscriptions, and designated high-yield savings objectives.
+        </p>
+      </div>
+      <div class="row-layout finance-actions">
+        <button igxButton="contained" type="button" class="add-expense-button">
+          <igx-icon>
+            add
+          </igx-icon>
+          <span>Log Expense</span>
+        </button>
+        <button igxButton="outlined" type="button" class="sub-expense-button">
+          Manage Recurring
+        </button>
+      </div>
+    </div>
+    <div class="row-layout fin-indicators">
+      <igx-card class="net-worth-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="net-icon">
+              <igx-icon class="icon">
+                payments
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Total Asset Valuation
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout fnet-content">
+            <h3 class="content">
+              $145,200.00
+            </h3>
+            <div class="row-layout fnet-trend">
+              <p class="ig-typography__subtitle-2 fnet-rate">
+                +2.5%
+              </p>
+              <p class="ig-typography__body-2 finance-page-description">
+                vs yesterday
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="net-worth-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="net-icon">
+              <igx-icon class="icon">
+                sync_alt
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Recurring Monthly Subscriptions
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout fnet-content">
+            <h3 class="content">
+              $89.00 / mo
+            </h3>
+            <div class="row-layout fnet-trend">
+              <p class="ig-typography__subtitle-2 fnet-rate">
+                7 Nodes Active
+              </p>
+              <p class="ig-typography__body-2 finance-page-description">
+                Linear, Notion, Apple, SaaS
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+      <igx-card class="net-worth-metric">
+        <igx-card-header>
+          <div igxCardThumbnail>
+            <igx-avatar shape="circle" class="net-icon">
+              <igx-icon class="icon">
+                savings
+              </igx-icon>
+            </igx-avatar>
+          </div>
+          <h3 igxCardHeaderTitle>
+            Emergency Node Allocation
+          </h3>
+          <h5 igxCardHeaderSubtitle>
+            Subtitle goes here...
+          </h5>
+        </igx-card-header>
+        <igx-card-content>
+          <div class="column-layout fnet-content">
+            <h3 class="content">
+              $12,000 / $15,000
+            </h3>
+            <div class="row-layout fnet-trend">
+              <p class="ig-typography__subtitle-2 fnet-rate">
+                80% Funded
+              </p>
+              <p class="ig-typography__body-2 finance-page-description">
+                estimated April completion
+              </p>
+            </div>
+          </div>
+        </igx-card-content>
+      </igx-card>
+    </div>
+    <div class="row-layout fin-highlights">
+      <div class="column-layout goal-progress-area">
+        <h5 class="content">
+          Active Financial Operations
+        </h5>
+        <div class="column-layout progress-bars">
+          <div class="column-layout emergency-fund-unit">
+            <div class="row-layout fund-labels">
+              <p class="ig-typography__body-2 content">
+                Vault Node emergency cushion
+              </p>
+              <p class="ig-typography__body-2 finance-page-description">
+                80% completed
+              </p>
+            </div>
+            <igx-linear-bar [value]="80" [animationDuration]="500" textAlign="center" [textTop]="true" class="linear-bar-zrttoq"></igx-linear-bar>
+          </div>
+          <div class="column-layout emergency-fund-unit">
+            <div class="row-layout fund-labels">
+              <p class="ig-typography__body-2 content">
+                High-yield index allocation
+              </p>
+              <p class="ig-typography__body-2 finance-page-description">
+                45% completed
+              </p>
+            </div>
+            <igx-linear-bar type="info" [value]="45" [animationDuration]="500" textAlign="center" [textTop]="true" class="linear-bar-g-0oms"></igx-linear-bar>
+          </div>
+        </div>
+      </div>
+      <div class="column-layout goal-progress-area">
+        <h5 class="content">
+          Subscription Matrix References
+        </h5>
+        <igx-list class="subs-list">
+          <igx-list-item [selected]="this.subsListSelectedItem != null && this.subsListSelectedItem === '0'" (click)="subsListSelectedItem = '0'" class="notion-personal">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-cpxd-3-8">
+                <igx-icon class="icon">
+                  autorenew
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Notion OS Workspace</span>
+            <span igxListLineSubTitle>$10.00 / month • Renews in 3 days</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.subsListSelectedItem != null && this.subsListSelectedItem === '1'" (click)="subsListSelectedItem = '1'" class="notion-personal">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-cpxd-3-8">
+                <igx-icon class="icon">
+                  autorenew
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Linear Engineering Matrix</span>
+            <span igxListLineSubTitle>$12.00 / month • Renews in 10 days</span>
+          </igx-list-item>
+          <igx-list-item [selected]="this.subsListSelectedItem != null && this.subsListSelectedItem === '2'" (click)="subsListSelectedItem = '2'" class="notion-personal">
+            <span igxListThumbnail>
+              <igx-avatar shape="circle" class="avatar-cpxd-3-8">
+                <igx-icon class="icon">
+                  autorenew
+                </igx-icon>
+              </igx-avatar>
+            </span>
+            <span igxListLineTitle>Apple iCloud Storage Sync</span>
+            <span igxListLineSubTitle>$9.99 / month • Renews in 18 days</span>
+          </igx-list-item>
+        </igx-list>
+      </div>
+    </div>
+  </div>
+</div>

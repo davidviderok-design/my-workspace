@@ -1,0 +1,120 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+}
+.row-layout {
+  display: flex;
+}
+.habits-wrapper {
+  background-color: #09090B;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0;
+  position: relative;
+  padding: 48px 32px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.main-habits-container {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 32px;
+  position: relative;
+  max-width: 1400px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.habits-actions-header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.habits-info {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px 0;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.habits-header-actions {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 0 16px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.habit-streaks-grid {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+}
+.gym-habit {
+  --background: #18181B;
+  --border-radius: 24px;
+  min-width: 260px;
+  max-width: 340px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.habits-page-title {
+  color: #FFFFFF;
+  height: max-content;
+  min-width: min-content;
+}
+.habits-page-description {
+  color: var(--ig-gray-400);
+  height: max-content;
+  min-width: min-content;
+}
+.avatar-npt-3oq {
+  --igx-avatar-background: #09090B;
+}
+.icon {
+  color: #6366F1;
+}
+.avatar-npt-3oq::part(base) {
+  --igx-avatar-color: #6366F1;
+}
+.create-habit-button {
+  --background: #6366F1;
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
+.button-1u-5gxf {
+  --foreground: #6366F1;
+  --ig-size: var(--ig-size-small);
+  height: max-content;
+}
+.badge-l-6-4hrt {
+  width: max-content;
+  height: max-content;
+}
